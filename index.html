@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Final Space</title>
+    <script src="./js/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 class="titulo">Final Space</h1>
+      <section class="container_personagens">
+        <ul
+          v-for="({name,status,species,origin,img_url,gender, abilities},index) in personagens"
+          :key="index"
+          class="container_personagem"
+        >
+          <li><img class="img_personagem" :src="img_url" :alt="name" /></li>
+          <li><h2 class="titulo_personagem">{{name}}</h2></li>
+          <li>
+            <div class="container_info">
+              <p><strong>Status:</strong> {{status}}</p>
+              <p><strong>Species:</strong> {{species}}</p>
+              <p><strong>Origin:</strong> {{origin}}</p>
+              <p><strong>Gender:</strong> {{gender}}</p>
+              <h3 class="abilidades_personagem">Abilities</h3>
+              <ol>
+                <li v-for="(abilitie) in abilities" :key="index">{{abilitie}}</li>
+              </ol>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <button @click="buttonToTop" class="button_up">&#9757;</button>
+    </div>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

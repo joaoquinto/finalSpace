@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo:ital@1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: hsl(210, 4%, 10%);
+}
+
+.button_up {
+  position: fixed;
+  top: 50vh;
+  left: 10vw;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.button_up:hover {
+  animation: ScaleButton 0.5s forwards;
+}
+
+@keyframes ScaleButton {
+  0% {
+    transform: scale(1);
+  }
+
+  %50 {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+.titulo {
+  text-align: center;
+  margin: 50px 0;
+  color: #fff;
+}
+
+.titulo,
+.titulo_personagem,
+.abilidades_personagem {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.titulo_personagem {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.container_personagens {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container_personagem {
+  padding: 50px;
+  background-color: hsl(167, 68%, 45%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.container_personagem + .container_personagem {
+  margin-top: 40px;
+}
+
+.img_personagem {
+  border-radius: 5px;
+}
+
+.container_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Arimo", sans-serif;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+
+.abilidades_personagem{
+  margin: 20px 0;
+}
+
+@media (min-width: 800px) {
+  .container_personagens {
+    width: 30%;
+  }
+}
