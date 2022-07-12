@@ -7,6 +7,20 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>Final Space</title>
     <script src="./js/vue.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-R9B24Y1B70"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-R9B24Y1B70");
+    </script>
   </head>
   <body>
     <div id="app">
@@ -27,7 +41,9 @@
               <p><strong>Gender:</strong> {{gender}}</p>
               <h3 class="abilidades_personagem">Abilities</h3>
               <ol>
-                <li v-for="(abilitie) in abilities" :key="index">{{abilitie}}</li>
+                <li v-for="(abilitie) in abilities" :key="index">
+                  {{abilitie}}
+                </li>
               </ol>
             </div>
           </li>
